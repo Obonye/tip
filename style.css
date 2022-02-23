@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.container {
+  background-color: hsl(185, 41%, 84%);
+}
+.top {
+  max-width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card > div {
+  flex: 1;
+}
+
+label,
+.title {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  font-size: 1rem;
+  padding-bottom: 0.8rem;
+}
+button {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+.btns input {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+  text-align: center;
+}
+.billSection,
+.noOfPeople {
+  width: 100%;
+  margin: 1rem 0;
+}
+.billSection label,
+.noOfPeople label {
+  display: block;
+}
+.billSection input {
+  background: url("images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+.noOfPeople input {
+  background: url("images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+.billSection input,
+.noOfPeople input {
+  width: 100%;
+  padding: 0.4rem 0;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  text-align: right;
+  font-weight: 700;
+  outline: none;
+  padding-right: 1rem;
+  border-radius: 10px;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  gap: 0.8rem;
+}
+.totalSection {
+  width: 100%;
+}
+.tipWrapper {
+  height: 100%;
+  width: 100%;
+}
+.totalSection {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  width: 100%;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: hsl(183, 100%, 15%);
+}
+.reset:hover {
+  transition: 5ms;
+  background-color: hsl(186, 14%, 43%);
+  color: hsl(184, 14%, 56%);
+}
+
+.amount,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+.tipPerPerson p,
+.totalPerPerson p {
+  width: 100%;
+  float: right;
+  font-size: 2rem;
+  font-family: "Space Mono", monospace;
+  text-align: right;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  color: hsl(172, 67%, 45%);
+}
+.totalSection p {
+  width: 100%;
+  font-weight: 700;
+}
+.leftSide,
+.rightSide {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  flex: 1;
+}
+
+.totalSection span {
+  font-size: 0.8rem;
+  color: hsl(186, 14%, 43%);
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+.error,
+.error2 {
+  display: block;
+  float: right;
+  visibility: hidden;
+  color: hsl(27, 100%, 50%);
+}
+
+@media screen and (min-width: 630px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reset {
+    margin-top: 5.8rem;
+    margin-bottom: 1rem;
+  }
+  .rightSide {
+    margin-left: 1rem;
+  }
+}
